@@ -1,2 +1,2 @@
-# escola
-Projeto de estudo para aplicação do Clean Architecture
+# escola-ddd
+Projeto de estudo para aplicação dos conceitos de DDD.
