@@ -5,6 +5,7 @@ import java.util.List;
 
 import br.com.alura.escola.academico.exceptions.NumeroMaximoDeTelefonesException;
 import br.com.alura.escola.academico.infra.aluno.CifradorDeSenhaComMD5;
+import br.com.alura.escola.shared.dominio.CPF;
 
 /**
  * Como é uma classe que tem um atributo (cpf) que pode ser usado para

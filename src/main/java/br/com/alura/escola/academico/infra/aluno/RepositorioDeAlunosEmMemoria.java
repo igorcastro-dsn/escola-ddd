@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.alura.escola.academico.dominio.aluno.Aluno;
-import br.com.alura.escola.academico.dominio.aluno.CPF;
 import br.com.alura.escola.academico.dominio.aluno.RepositorioDeAlunos;
 import br.com.alura.escola.academico.exceptions.AlunoNaoEncontradoException;
+import br.com.alura.escola.shared.dominio.CPF;
 
 /**
  * Implementação do respositório de alunos utilizando uma estrutura de dados em memória

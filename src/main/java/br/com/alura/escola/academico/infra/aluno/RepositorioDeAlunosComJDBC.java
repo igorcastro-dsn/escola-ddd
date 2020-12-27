@@ -10,10 +10,10 @@ import java.util.List;
 
 import br.com.alura.escola.academico.dominio.aluno.Aluno;
 import br.com.alura.escola.academico.dominio.aluno.AlunoBuilder;
-import br.com.alura.escola.academico.dominio.aluno.CPF;
 import br.com.alura.escola.academico.dominio.aluno.RepositorioDeAlunos;
 import br.com.alura.escola.academico.dominio.aluno.Telefone;
 import br.com.alura.escola.academico.exceptions.AlunoNaoEncontradoException;
+import br.com.alura.escola.shared.dominio.CPF;
 
 /**
  * Implementação do respositório de alunos utilizando JDBC 
