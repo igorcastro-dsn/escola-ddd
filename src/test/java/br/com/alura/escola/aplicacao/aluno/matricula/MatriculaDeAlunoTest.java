@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import br.com.alura.escola.dominio.EmissorDeEventos;
 import br.com.alura.escola.dominio.aluno.Aluno;
 import br.com.alura.escola.dominio.aluno.CPF;
 import br.com.alura.escola.infra.aluno.RepositorioDeAlunosEmMemoria;
@@ -14,7 +15,7 @@ class MatriculaDeAlunoTest {
 
 	@Test
 	public void alunoDeveSerPersistido() {
-		MatriculaDeAluno matricula = new MatriculaDeAluno(repositorio);
+		MatriculaDeAluno matricula = new MatriculaDeAluno(repositorio, new EmissorDeEventos());
 		String nome = "Fulano";
 		String cpf = "111.111.110-00";
 		String email = "fulano@email.com";

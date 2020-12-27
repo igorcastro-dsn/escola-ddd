@@ -3,6 +3,7 @@ package br.com.alura.escola.dominio.aluno;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.alura.escola.exceptions.NumeroMaximoDeTelefonesException;
 import br.com.alura.escola.infra.aluno.CifradorDeSenhaComMD5;
 
 /**
@@ -10,6 +11,8 @@ import br.com.alura.escola.infra.aluno.CifradorDeSenhaComMD5;
  * diferenciar um objeto do outro, esse tipo de classe é considerada como
  * Entidade.
  * 
+ * Além disso essa classe pode ser considerada uma Aggregate Root, visto que ela
+ * agrupa uma coleção de objetos relacionados. Ou seja, uma entidade com vários VO's.
  * @author igorcastro.dsn
  *
  */
@@ -28,11 +31,14 @@ public class Aluno {
 	}
 
 	public void adicionarTelefone(String ddd, String numero) {
+		if (this.telefones.size() == 2) {
+			throw new NumeroMaximoDeTelefonesException();
+		}
 		this.telefones.add(new Telefone(ddd, numero));
 	}
 
-	public String getCpf() {
-		return cpf.getNumero();
+	public CPF getCpf() {
+		return cpf;
 	}
 
 	public String getNome() {

@@ -32,7 +32,7 @@ public class RepositorioDeAlunosComJDBC implements RepositorioDeAlunos {
 		String sql = "INSERT INTO aluno(cpf, nome, email) VALUES(?, ?, ?)";
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-			ps.setString(1, aluno.getCpf());
+			ps.setString(1, aluno.getCpf().getNumero());
 			ps.setString(2, aluno.getNome());
 			ps.setString(3, aluno.getEmail());
 			ps.execute();
